@@ -2,7 +2,7 @@ import { Header } from "./features/header";
 import NotFound from "./pages/404";
 import { Mint, MintLayout, Trading } from "./pages/mint";
 import { Home, SniperLayout } from "./pages/sniper";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 // import { SniperLayout, Home } from "@pages/sniper";
 // import { MintLayout, Mint ,Trading} from "@pages/mint";
 // import NotFound from "@pages/404";

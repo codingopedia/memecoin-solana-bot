@@ -60,7 +60,7 @@ export const Header = () => {
       </div>
       <div className="flex items-center gap-5 px-5">
         <NavBtn name='Sniping Bot' link='/sniper' />
-        <NavBtn name='Token Lanuchpad' link='/token/pools' />
+        <NavBtn name='Token Launchpad' link='/token/pools' />
       </div>
     </div >
   )
