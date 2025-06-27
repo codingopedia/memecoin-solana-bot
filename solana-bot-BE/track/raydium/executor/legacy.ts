@@ -8,7 +8,10 @@ interface Blockhash {
   lastValidBlockHeight: number;
 }
 
-export const execute = async (transaction: VersionedTransaction, latestBlockhash: Blockhash) => {
+export const execute = async (
+  transaction: VersionedTransaction,
+  latestBlockhash: Blockhash,
+): Promise<string | false> => {
   try {
     const simRes = await solanaConnection.simulateTransaction(transaction)
     // console.log(simRes)
@@ -34,10 +37,9 @@ export const execute = async (transaction: VersionedTransaction, latestBlockhash
     if (confirmation.value.err) {
       console.log('tx error')
       return false
-    }
-    else {
+    } else {
       console.log('tx success')
-      return true
+      return signature
     }
   } catch (e) {
     console.log('error', e)

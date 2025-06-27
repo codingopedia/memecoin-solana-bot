@@ -278,7 +278,7 @@ WalletRouter.post(
             })
             const result = await execute(txId.res, latestBlockhash)
             if (result) {
-              buyStatus(poolId, 2, '')
+              buyStatus(poolId, 2, result)
               return res.json({ msg: 'success' })
             } else {
               buyStatus(poolId, 3, '')

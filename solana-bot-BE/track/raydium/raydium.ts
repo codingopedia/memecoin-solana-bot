@@ -539,6 +539,8 @@ const buy = async (accountId: PublicKey, baseMint: PublicKey, poolKeys: Liquidit
                 processingToken = false
                 console.log('buy failed processingToken', processingToken)
                 return
+            } else {
+                buyStatus(accountId.toString(), 2, res)
             }
         }
         console.log('bought success')
