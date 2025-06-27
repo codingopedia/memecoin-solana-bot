@@ -631,7 +631,7 @@ export const manualsell = async (mint: string, poolId: string): Promise<void> =>
 
         const info = await solanaConnection.getTokenAccountBalance(sourceAccount)
         const amount = Number(info.value.amount)
-        if (poolKeys) {
+        if (!poolKeys) {
             logger.warn({ mint }, 'No pool keys found')
             return
         }
